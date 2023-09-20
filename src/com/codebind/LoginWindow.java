@@ -9,14 +9,22 @@ import java.awt.event.ActionListener;
 import java.util.Arrays;
 
 public class LoginWindow {
+    private JFrame loginFrame = new JFrame("Login");
+    private JPanel loginPanel = new JPanel();
+    private JLabel userLabel = new JLabel("Username");
+    private JTextField UsernameField = new JTextField();
+
+    private JLabel passwordLabel = new JLabel("Password");
+
+    private JPasswordField passwordField = new JPasswordField();
+
+    private JButton buttonMain = new JButton("Login");
     LoginWindow() {
-        JPanel loginPanel = new JPanel();
-        JFrame loginFrame = new JFrame("Login");
+
         loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginFrame.setPreferredSize(new Dimension(400, 250));
         loginFrame.setLocation(600, 300);
         loginFrame.add(loginPanel);
-
         loginFrame.pack();
 
 
@@ -25,18 +33,18 @@ public class LoginWindow {
         loginPanel.setLayout(null);
         loginPanel.setBackground(new Color(200,200,200));
 
-        JLabel userLabel = new JLabel("Username");
+
         userLabel.setBounds(150, 20, 100, 20);
         userLabel.setForeground(new Color(0, 0, 0));
 
-        JTextField UsernameField = new JTextField();
+
         UsernameField.setBounds(150, 40, 100, 20);
 
-        JLabel passwordLabel = new JLabel("Password");
-        passwordLabel.setBounds(150, 70, 100, 20);
-        passwordLabel.setForeground(new Color(255, 0, 0));
 
-        JPasswordField passwordField = new JPasswordField();
+        passwordLabel.setBounds(150, 70, 100, 20);
+        passwordLabel.setForeground(new Color(0, 0, 0));
+
+
         passwordField.setBounds(150, 90, 100, 20);
 
         loginPanel.add(userLabel);
@@ -45,7 +53,7 @@ public class LoginWindow {
         loginPanel.add(passwordField);
 
 
-        JButton buttonMain = new JButton("Login");
+
         buttonMain.setBounds(150, 140, 100, 30);
 
         loginPanel.add(buttonMain);
@@ -57,6 +65,8 @@ public class LoginWindow {
                 String user = UsernameField.getText();
                 char[] input = passwordField.getPassword();
                 if (isUsernameAndPasswordCorrect(user, input)) {
+                    launchNavigator();
+
 
 
 
@@ -68,6 +78,12 @@ public class LoginWindow {
         });
 
         loginFrame.setVisible(true);
+    }
+
+    public void launchNavigator() {
+        loginFrame.dispose();
+        Navigator nav = new Navigator();
+
     }
 
     private static boolean isUsernameAndPasswordCorrect(String user, char[] password) {
