@@ -66,12 +66,17 @@ public class LoginWindow {
                 char[] input = passwordField.getPassword();
                 if (isUsernameAndPasswordCorrect(user, input)) {
                     launchNavigator();
-
-
-
-
                 } else {
                     JOptionPane.showMessageDialog(null, "Unsuccessful Login. Who are you!");
+                    int ans = JOptionPane.showConfirmDialog(null, "Are you sure you are in the right place?",
+                            "Time to go!",
+                            JOptionPane.YES_NO_OPTION);
+                    if (ans==1) {
+                        loginFrame.dispose();
+                    } else {
+                        UsernameField.setText("");
+                        passwordField.setText("");
+                    }
                 }
 
             }

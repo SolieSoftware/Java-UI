@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Have just produced a simple login page using Java Swing.">
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window.">
+      <change afterPath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/LoginWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/Navigator.java" afterDir="false" />
     </list>
@@ -89,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695218116144</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window.">
+      <created>1695223958255</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695223958255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Have just produced a simple login page using Java Swing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Have just produced a simple login page using Java Swing." />
+    <MESSAGE value="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window." />
+    <option name="LAST_COMMIT_MESSAGE" value="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window." />
   </component>
 </project>
