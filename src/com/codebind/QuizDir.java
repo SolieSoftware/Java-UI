@@ -2,6 +2,8 @@ package com.codebind;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import static java.awt.Font.DIALOG;
 import static java.awt.font.TextAttribute.FONT;
@@ -57,6 +59,15 @@ public class QuizDir{
         capitalButton4.setSize(80,40);
         capitalButton5.setSize(80,40);
         capitalButton6.setSize(80,40);
+
+        capitalButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                CapitalQuizOne capitalQuizOne = new CapitalQuizOne();
+
+            }
+        });
 
 
 

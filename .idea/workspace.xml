@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window.">
-      <change afterPath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
