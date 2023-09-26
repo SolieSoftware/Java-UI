@@ -46,9 +46,12 @@ public class CapitalQuizOne {
             "Madrid"
     };
 
+    ButtonGroup[] answerGroups;
     ArrayList<String> capitalList = getCapitals();
 
     JButton submitButton = new JButton("Submit Answers");
+
+    int totalCorrect;
 
 
     CapitalQuizOne() {
@@ -61,6 +64,7 @@ public class CapitalQuizOne {
         capitalList.remove(0);
 
         Font f1 = new Font("SansSerif", Font.BOLD, 20);
+        answerGroups = new ButtonGroup[10];
 
         for (int i = 0; i < 10; i++) {
             euroPanels[i] = new JPanel();
@@ -72,6 +76,7 @@ public class CapitalQuizOne {
             questions[i].setFont(f1);
 
             answerOptions[i] = new JRadioButton[4];
+            answerGroups[i] = new ButtonGroup();
             Random rand = new Random();
             int posCorrect = rand.nextInt(4);
             for (int j = 0; j < 4; j++) {
@@ -81,6 +86,7 @@ public class CapitalQuizOne {
 
                     answerOptions[i][j] = new JRadioButton(getWrongAnswer(correctAnswers[i]));
                 }
+                answerGroups[i].add(answerOptions[i][j]);
             }
 
             euroPanels[i].add(questions[i]);
@@ -91,6 +97,29 @@ public class CapitalQuizOne {
             euroPanelMain.add(euroPanels[i]);
         }
         submitButton.setSize(250, 140);
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed (ActionEvent e){
+                totalCorrect = 0;
+                String[] answers = new String[10];
+
+                for (int i = 0; i < 10; i++) {
+                    for (int j = 0; j < 4; j++) {
+                        if (answerOptions[i][j].isSelected()) {
+                            answers[i] = answerOptions[i][j].getText();
+                        }
+                    }
+
+                }
+                for (int i=0; i<10; i++) {
+                    if (answers[i] == correctAnswers[i]) {
+                        totalCorrect += 1;
+                    }
+                }
+                String output = "You got " + totalCorrect + "/10";
+                JOptionPane.showMessageDialog(null, output);
+            }
+        });
+
         euroPanelMain.add(submitButton);
 
         euroQuizFrame.add(euroPanelMain);
@@ -135,6 +164,8 @@ public class CapitalQuizOne {
         return wrongCapital;
 
     }
+
+
 
    public static void main(String[] args) {
         CapitalQuizOne one = new CapitalQuizOne();
