@@ -28,6 +28,7 @@ public class MovieQuiz {
         movieFrame.setSize(new Dimension(500,500));
         movieFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         movieFrame.setLayout(new BorderLayout());
+
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
             Statement statement = connection.createStatement();
