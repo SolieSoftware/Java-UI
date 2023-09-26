@@ -19,13 +19,12 @@ public class QuizDir{
 
     JPanel capitalPanel = new JPanel();
 
-    JButton capitalButton1 = new JButton("Capital Quiz 1");
-    JButton capitalButton2 = new JButton("Capital Quiz 2");
-    JButton capitalButton3 = new JButton("Capital Quiz 3");
-    JButton capitalButton4 = new JButton("Capital Quiz 4");
-    JButton capitalButton5 = new JButton("Capital Quiz 5");
+    JButton[] capitalButtons;
 
-    JButton capitalButton6 = new JButton("Capital Quiz 6");
+    JPanel moviePanel = new JPanel();
+
+    JButton movieButton = new JButton("Movie Quiz!!!");
+
 
 
 
@@ -36,7 +35,7 @@ public class QuizDir{
         quizFrame.setLocationRelativeTo(null);
         quizFrame.setLayout(null);
 
-        infoPanel.setSize(600, 30);
+        infoPanel.setSize(600, 100);
         infoPanel.setAlignmentY(Component.TOP_ALIGNMENT);
         infoPanel.setLayout(new FlowLayout());
         quizFrame.add(infoPanel);
@@ -48,19 +47,20 @@ public class QuizDir{
         info.setVerticalAlignment(SwingConstants.CENTER);
         infoPanel.add(info);
 
-        capitalPanel.setBounds(0, 30, 600, 100);
+        capitalPanel.setBounds(0, 100, 600, 100);
         capitalPanel.setBackground(new Color(255,255,255));
         capitalPanel.setLayout(new FlowLayout());
         quizFrame.add(capitalPanel);
 
-        capitalButton1.setSize(80,40);
-        capitalButton2.setSize(80,40);
-        capitalButton3.setSize(80,40);
-        capitalButton4.setSize(80,40);
-        capitalButton5.setSize(80,40);
-        capitalButton6.setSize(80,40);
+        capitalButtons = new JButton[7];
 
-        capitalButton1.addActionListener(new ActionListener() {
+        for (int i = 0; i<7; i++) {
+            capitalButtons[i] = new JButton("Capital Quiz " + (i+1));
+            capitalButtons[i].setSize(200,80);
+            capitalPanel.add(capitalButtons[i]);
+        }
+
+        capitalButtons[0].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 quizFrame.dispose();
@@ -71,21 +71,31 @@ public class QuizDir{
 
 
 
+        moviePanel.setBounds(0, 200, 600, 100);
+        moviePanel.setBackground(new Color(255,255,255));
+        moviePanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        quizFrame.add(moviePanel);
 
-        capitalPanel.add(capitalButton1);
-        capitalPanel.add(capitalButton2);
-        capitalPanel.add(capitalButton3);
-        capitalPanel.add(capitalButton4);
-        capitalPanel.add(capitalButton5);
-        capitalPanel.add(capitalButton6);
+        movieButton.setSize(300, 130);
 
+        movieButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                MovieQuiz movieQuiz = new MovieQuiz();
+            }
 
-
-
-
+        });
+        moviePanel.add(movieButton);
 
         quizFrame.setVisible(true);
 
+
+    }
+
+
+    public static void main (String[] args) {
+        QuizDir quizDirectory = new QuizDir();
 
     }
 

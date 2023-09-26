@@ -18,6 +18,8 @@ public class CapitalQuizOne {
     JPanel euroPanelMain = new JPanel();
 
     JPanel[] euroPanels = new JPanel[10];
+
+    JPanel[] answerPanel = new JPanel[10];
     JLabel[] questions = new JLabel[10];
     JRadioButton[][] answerOptions = new JRadioButton[10][4];
 
@@ -56,8 +58,8 @@ public class CapitalQuizOne {
 
     CapitalQuizOne() {
         euroQuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        euroQuizFrame.setPreferredSize(new Dimension(1000, 1000));
-        euroQuizFrame.setLocationRelativeTo(null);
+        euroQuizFrame.setPreferredSize(new Dimension(800, 800));
+        euroQuizFrame.setLocation(600, 200);
 
         euroPanelMain.setLayout(new GridLayout(10, 1, 10, 10));
 
@@ -68,7 +70,7 @@ public class CapitalQuizOne {
 
         for (int i = 0; i < 10; i++) {
             euroPanels[i] = new JPanel();
-            euroPanels[i].setLayout(new FlowLayout(FlowLayout.LEFT));
+            euroPanels[i].setLayout(new BorderLayout());
             euroPanels[i].setBackground(new Color(255, 255, 255));
             euroPanels[i].setBorder(BorderFactory.createLineBorder(Color.black));
 
@@ -89,16 +91,19 @@ public class CapitalQuizOne {
                 answerGroups[i].add(answerOptions[i][j]);
             }
 
-            euroPanels[i].add(questions[i]);
+            euroPanels[i].add(questions[i], BorderLayout.NORTH);
+            answerPanel[i] = new JPanel();
+            answerPanel[i].setLayout(new FlowLayout());
+            euroPanels[i].add(answerPanel[i], BorderLayout.SOUTH);
             for (int j = 0; j < 4; j++) {
-                euroPanels[i].add(answerOptions[i][j]);
+                answerPanel[i].add(answerOptions[i][j]);
             }
 
             euroPanelMain.add(euroPanels[i]);
         }
         submitButton.setSize(250, 140);
         submitButton.addActionListener(new ActionListener() {
-            public void actionPerformed (ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 totalCorrect = 0;
                 String[] answers = new String[10];
 
@@ -110,7 +115,7 @@ public class CapitalQuizOne {
                     }
 
                 }
-                for (int i=0; i<10; i++) {
+                for (int i = 0; i < 10; i++) {
                     if (answers[i] == correctAnswers[i]) {
                         totalCorrect += 1;
                     }
@@ -162,13 +167,6 @@ public class CapitalQuizOne {
             wrongCapital = capitalList.get(capitalNum);
         }
         return wrongCapital;
-
-    }
-
-
-
-   public static void main(String[] args) {
-        CapitalQuizOne one = new CapitalQuizOne();
 
     }
 }

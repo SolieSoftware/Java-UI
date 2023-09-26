@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores.">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maven/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,25 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "621",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;621&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.codebind" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CapitalQuizOne">
+  <component name="RunManager" selected="Application.QuizDir">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.App" />
       <module name="Java-UI" />
@@ -68,7 +67,14 @@
       </method>
     </configuration>
     <configuration name="CapitalQuizOne" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.codebind.CapitalQuizOne" />
+      <option name="MAIN_CLASS_NAME" value="com.codebind." />
+      <module name="Java-UI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuizDir" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.QuizDir" />
       <module name="Java-UI" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,6 +83,7 @@
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.CapitalQuizOne" />
+      <item itemvalue="Application.QuizDir" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -130,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695721949860</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores.">
+      <created>1695745573332</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695745573332</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
