@@ -8,7 +8,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Vector;
+import java.util.Random;
+
 
 
 public class CapitalQuizOne {
@@ -22,27 +23,42 @@ public class CapitalQuizOne {
 
     String[] QuestionList = {"Capital of Germany?",
             "Capital of Poland?",
-            "Capital of Bulgaria",
-            "Capital of Sweden",
-            "Capital of Norway",
-            "Capital of Greece",
+            "Capital of Bulgaria?",
+            "Capital of Sweden?",
+            "Capital of Norway?",
+            "Capital of Greece?",
             "Capital of Austria?",
             "Capital of Ireland?",
             "Capital of Portugal?",
             "Capital of Spain?"
     };
 
+    String[] correctAnswers = {
+            "Berlin",
+            "Warsaw",
+            "Sofia",
+            "Stockholm",
+            "Oslo",
+            "Athens",
+            "Vienna",
+            "Dublin",
+            "Lisbon",
+            "Madrid"
+    };
+
+    ArrayList<String> capitalList = getCapitals();
+
+    JButton submitButton = new JButton("Submit Answers");
+
 
     CapitalQuizOne() {
         euroQuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        euroQuizFrame.setPreferredSize(new Dimension(600, 880));
+        euroQuizFrame.setPreferredSize(new Dimension(1000, 1000));
         euroQuizFrame.setLocationRelativeTo(null);
 
-        ArrayList<String> capitalList = new ArrayList<String>();
-
-        capitalList = getCapitals();
-
         euroPanelMain.setLayout(new GridLayout(10, 1, 10, 10));
+
+        capitalList.remove(0);
 
         Font f1 = new Font("SansSerif", Font.BOLD, 20);
 
@@ -56,8 +72,15 @@ public class CapitalQuizOne {
             questions[i].setFont(f1);
 
             answerOptions[i] = new JRadioButton[4];
+            Random rand = new Random();
+            int posCorrect = rand.nextInt(4);
             for (int j = 0; j < 4; j++) {
-                answerOptions[i][j] = new JRadioButton();
+                if (j == posCorrect) {
+                    answerOptions[i][j] = new JRadioButton(correctAnswers[i]);
+                } else {
+
+                    answerOptions[i][j] = new JRadioButton(getWrongAnswer(correctAnswers[i]));
+                }
             }
 
             euroPanels[i].add(questions[i]);
@@ -67,38 +90,55 @@ public class CapitalQuizOne {
 
             euroPanelMain.add(euroPanels[i]);
         }
+        submitButton.setSize(250, 140);
+        euroPanelMain.add(submitButton);
 
         euroQuizFrame.add(euroPanelMain);
+
+
         euroQuizFrame.pack();
         euroQuizFrame.setVisible(true);
     }
 
     public ArrayList<String> getCapitals() {
         String file = "C:\\Users\\solsh\\IdeaProjects\\Java-UI\\src\\com\\codebind\\europe-capital-cities.csv";
-        ArrayList<String> capitals = new ArrayList<String>();
+        ArrayList<String> capitals = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 // Split the line into fields using a comma as the delimiter
                 String[] fields = line.split(",");
-
                 // Process the fields as needed
                 int count = 0;
                 for (String field : fields) {
                     count += 1;
                     if (count == 2) {
                         capitals.add(field);
-
                     }
-
-                }
-                System.out.println(); // Move to the next line
+                }// Move to the next line
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
         return capitals;
+    }
+
+    public String getWrongAnswer(String correctAnswer) {
+        Random rand = new Random();
+        int capitalNum = 0;
+        String wrongCapital = correctAnswer;
+        while (wrongCapital.equals(correctAnswer)) {
+            capitalNum = rand.nextInt(capitalList.size());
+            wrongCapital = capitalList.get(capitalNum);
+        }
+        return wrongCapital;
+
+    }
+
+   public static void main(String[] args) {
+        CapitalQuizOne one = new CapitalQuizOne();
+
     }
 }
 

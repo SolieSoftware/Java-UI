@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window.">
-      <change afterPath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" afterDir="false" />
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Did some further work on the capitals List. Spent along time experimenting with Layouts. They do not seem as attuned as they are on CSS. Downloaded and used a csv file and in next iteration going to work on randomising the capitals into the question.">
+      <change afterPath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
       <recent name="com.codebind" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.CapitalQuizOne">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.App" />
       <module name="Java-UI" />
@@ -57,6 +57,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CapitalQuizOne" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.CapitalQuizOne" />
+      <module name="Java-UI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.CapitalQuizOne" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -95,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695223958255</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Did some further work on the capitals List. Spent along time experimenting with Layouts. They do not seem as attuned as they are on CSS. Downloaded and used a csv file and in next iteration going to work on randomising the capitals into the question.">
+      <created>1695315778041</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695315778041</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Have just produced a simple login page using Java Swing." />
     <MESSAGE value="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window." />
-    <option name="LAST_COMMIT_MESSAGE" value="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window." />
+    <MESSAGE value="Did some further work on the capitals List. Spent along time experimenting with Layouts. They do not seem as attuned as they are on CSS. Downloaded and used a csv file and in next iteration going to work on randomising the capitals into the question." />
+    <option name="LAST_COMMIT_MESSAGE" value="Did some further work on the capitals List. Spent along time experimenting with Layouts. They do not seem as attuned as they are on CSS. Downloaded and used a csv file and in next iteration going to work on randomising the capitals into the question." />
   </component>
 </project>
