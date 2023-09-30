@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores.">
-      <change afterPath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" afterDir="false" />
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-UI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;621&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "621",
+    "jdk.selected.JAVA_MODULE": "openjdk-20",
+    "last_opened_file_path": "C:/Users/solsh/IdeaProjects/Java-UI/lib/postgresql-42.6.0.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.codebind" />
@@ -144,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695745573332</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores.">
+      <created>1695749148831</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695749148831</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD.">
+      <created>1695750011868</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695750011868</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,7 +177,18 @@
     <MESSAGE value="Login frame has now been made into a reusable component. And it now launches a blank navigator window. Now to determine the use for the navigator window." />
     <MESSAGE value="Did some further work on the capitals List. Spent along time experimenting with Layouts. They do not seem as attuned as they are on CSS. Downloaded and used a csv file and in next iteration going to work on randomising the capitals into the question." />
     <MESSAGE value="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores." />
-    <option name="LAST_COMMIT_MESSAGE" value="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores." />
+    <MESSAGE value="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD." />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
