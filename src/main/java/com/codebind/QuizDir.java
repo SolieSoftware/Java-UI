@@ -29,6 +29,8 @@ public class QuizDir{
 
 
 
+
+
     QuizDir() {
         quizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         quizFrame.setSize(600, 600);

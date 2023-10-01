@@ -6,6 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Arrays;
 
 public class LoginWindow {
@@ -19,6 +23,14 @@ public class LoginWindow {
     private JPasswordField passwordField = new JPasswordField();
 
     private JButton buttonMain = new JButton("Login");
+
+    private String url = "jdbc:postgresql://localhost:5432/Login_Details";
+
+    private String postgres_username = "postgres";
+
+    private String postgres_password = "postgres";
+
+    JButton RegisterButton = new JButton();
     LoginWindow() {
 
         loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,9 +79,8 @@ public class LoginWindow {
                 if (isUsernameAndPasswordCorrect(user, input)) {
                     launchNavigator();
                 } else {
-                    JOptionPane.showMessageDialog(null, "Unsuccessful Login. Who are you!");
-                    int ans = JOptionPane.showConfirmDialog(null, "Are you sure you are in the right place?",
-                            "Time to go!",
+                    int ans = JOptionPane.showConfirmDialog(null, "Would you like to try again?",
+                            "Incorrect Login",
                             JOptionPane.YES_NO_OPTION);
                     if (ans==1) {
                         loginFrame.dispose();
@@ -91,24 +102,45 @@ public class LoginWindow {
 
     }
 
-    private static boolean isUsernameAndPasswordCorrect(String user, char[] password) {
-        boolean isCorrect = true;
-        String correctUsername = "Sol";
-        char[] correctPassword = {'L', 'o', 's', 't', '!'};
-        boolean isCorrectUser = user.equals(correctUsername);
-        boolean isCorrectP = Arrays.equals(password, correctPassword);
+    private boolean isUsernameAndPasswordCorrect(String user, char[] password) {
+
+        try {
+            Connection connection = DriverManager.getConnection(url, postgres_username, postgres_password);
+            Statement statement = connection.createStatement();
+            String query = "SELECT * FROM login_details WHERE username=\'" + user + "\';";
+
+            String resultPassword = null;
+            try {
+                ResultSet resultSet = statement.executeQuery(query);
+                resultPassword = null;
+                while (resultSet.next()) {
+                    resultPassword = resultSet.getString("password");
+                }
+                char[] correctPassword = resultPassword.toCharArray();
+                boolean isCorrectP = Arrays.equals(password, correctPassword);
+
+                if (isCorrectP) {
+                    return true;
+                } else {
+                    JOptionPane.showMessageDialog(null, "The password was incorrect.");
+                    return false;
+                }
 
 
+            } catch (Exception e) {
+                if (resultPassword == null) {
+                    JOptionPane.showMessageDialog(null, "This username does not exist in the database.");
+                }
+                e.printStackTrace();
+            }
 
-        if (isCorrectUser && isCorrectP) {
-            return true;
-        } else {
-            return false;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Cannot Connect to server at the moment. Please retry again soon!");
+            e.printStackTrace();
+
         }
 
+        return false;
+
     }
-
-
-
-
 }

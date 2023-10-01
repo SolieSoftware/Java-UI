@@ -24,7 +24,7 @@ public class MovieQuiz {
 
     private String url = "jdbc:postgresql://localhost:5432/movies";
     private String username = "postgres";
-    private String password = "Joker100v";
+    private String password = "postgres";
 
     String[][] movie = new String[100][3];
 

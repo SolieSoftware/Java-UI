@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD.">
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="All relevant functionality added to movie quiz window. Next points of order are to set up suites of unit tests as part of the program build.">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/codebind/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-UI.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/CapitalQuizOne.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/CapitalQuizOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/CapitalQuizOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/MovieQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/MovieQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codebind/europe-capital-cities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/europe-capital-cities.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -45,6 +61,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "621",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "last_opened_file_path": "C:/Users/solsh/IdeaProjects/Java-UI/lib/postgresql-42.6.0.jar",
     "project.structure.last.edited": "Modules",
@@ -57,8 +75,14 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.codebind" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.codebind" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.QuizDir">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.App" />
       <module name="Java-UI" />
@@ -80,11 +104,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java-UI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codebind.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codebind" />
+      <option name="MAIN_CLASS_NAME" value="com.codebind.AppTest" />
+      <option name="METHOD_NAME" value="main" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.CapitalQuizOne" />
       <item itemvalue="Application.QuizDir" />
+      <item itemvalue="JUnit.AppTest.main" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -158,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695750011868</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="All relevant functionality added to movie quiz window. Next points of order are to set up suites of unit tests as part of the program build.">
+      <created>1696095545687</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696095545687</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +231,8 @@
     <MESSAGE value="Did some further work on the capitals List. Spent along time experimenting with Layouts. They do not seem as attuned as they are on CSS. Downloaded and used a csv file and in next iteration going to work on randomising the capitals into the question." />
     <MESSAGE value="Capital One Quiz updated with answers to questions. Now I need to add funtionality to the button. And add a persitence layer to keep track of quiz scores." />
     <MESSAGE value="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD." />
-    <option name="LAST_COMMIT_MESSAGE" value="Forgot to add a proper commit message. So MovieQuiz page added will test to see if this gets access to the postgress database. Need to think about setting up test suites for TDD." />
+    <MESSAGE value="All relevant functionality added to movie quiz window. Next points of order are to set up suites of unit tests as part of the program build." />
+    <option name="LAST_COMMIT_MESSAGE" value="All relevant functionality added to movie quiz window. Next points of order are to set up suites of unit tests as part of the program build." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
