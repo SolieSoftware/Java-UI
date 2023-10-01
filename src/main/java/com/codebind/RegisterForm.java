@@ -4,28 +4,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 
 public class RegisterForm extends JPanel {
-
-    JFrame RegisterForm = new JFrame("Register");
 
     JPanel form = new JPanel();
 
     JLabel[] fieldNames = new JLabel[3];
 
-    private JTextField username = new JTextField();
+    public static JTextField username = new JTextField();
 
-    private JPasswordField password = new JPasswordField();
+    public JPasswordField password = new JPasswordField();
 
-    private JTextField email = new JTextField();
+    public JTextField email = new JTextField();
 
-    JButton registerButton = new JButton();
+    JButton registerButton = new JButton("Submit");
 
-    private String url = "jdbc:postgresql://postgres/Login_Details";
+    private String url = "jdbc:postgresql://localhost:5432/Login_Details";
     private String user_post = "postgres";
     private String password_post = "postgres";
 
@@ -71,19 +66,46 @@ public class RegisterForm extends JPanel {
             form.add(Box.createRigidArea(new Dimension(500, 40)));
         }
 
-        registerButton.setPreferredSize(new Dimension(250, 130);
+        registerButton.setPreferredSize(new Dimension(150, 50));
+        registerButton.setMinimumSize(new Dimension(150, 50));
+        registerButton.setMaximumSize(new Dimension(150, 50));
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                try {
-                    Connection connection = DriverManager.getConnection(url, user_post, password_post);
-                    Statement statement = connection.createStatement();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
+                if (checkEmptyFields() == false) {
+                    JOptionPane.showMessageDialog(null, "You must fill in all the necessary fields. ");
+                    return;
                 }
+
+                String user = username.getText();
+                char[] pass = password.getPassword();
+                String mail = email.getText();
+
+
+                if (checkUsernameExists(user) == false) {
+                    JOptionPane.showMessageDialog(null, "This username already exists please pick another one");
+                    username.setText("");
+                    password.setText("");
+                    email.setText("");
+                    return;
+                }
+
+                addRecord(user, pass.toString(), mail);
+
+                username.setText("");
+                password.setText("");
+                email.setText("");
+
+                JOptionPane.showMessageDialog(null, "Welcome to the Club!! Please login on the login page. ");
+
+                return;
+
+
+
             }
         });
+
+        form.add(registerButton);
 
         this.add(form);
         this.setVisible(true);
@@ -91,13 +113,56 @@ public class RegisterForm extends JPanel {
     }
 
     public boolean checkEmptyFields() {
-        boolean check;
         String temp;
-        for (int i=0; i<3; i++) {
-            temp = fieldNames[i].getText();
-            if (temp.isEmpty()) {
-                check = false;
-            }
+        if (!username.getText().isEmpty() && !password.getText().isEmpty() && !email.getText().isEmpty()) {
+            return true;
+        } else {
+            return false;
         }
+
+    }
+
+    public boolean checkUsernameExists(String user) {
+        boolean check = true;
+        try {
+            Connection connection = DriverManager.getConnection(url, user_post, password_post);
+            Statement statement = connection.createStatement();
+
+            String query = "SELECT username FROM login_details WHERE username=\'"+user+"\';";
+            ResultSet resultSet = statement.executeQuery(query);
+
+            String checkUser = null;
+            while (resultSet.next()) {
+                checkUser = resultSet.getString("username");
+            }
+
+            if (checkUser == null) {
+                return true;
+            } else {
+                return false;
+            }
+
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public void addRecord(String user, String pass, String email) {
+        try {
+            Connection connection = DriverManager.getConnection(url, user_post, password_post);
+            Statement statement = connection.createStatement();
+            String query = "INSERt INTO login_details (username, password, email) VALUES (\'" +
+                    user + "\', \'" + pass + "\', \'" + email +"\');";
+            int countUpdate = statement.executeUpdate(query);
+
+            System.out.println(countUpdate + " record has been added to the database. ");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return;
     }
 }

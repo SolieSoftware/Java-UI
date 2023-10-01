@@ -17,7 +17,7 @@ class AppTest {
         WindowListener listener = new WindowAdapter() {
             public void WindowOpened(WindowEvent evt) {
                 Frame frame = (Frame) evt.getSource();
-                assertEquals("Login", frame.getTitle());
+                assertEquals("Pages", frame.getTitle());
             }
         };
 

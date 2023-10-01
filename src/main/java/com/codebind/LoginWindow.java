@@ -30,14 +30,8 @@ public class LoginWindow extends JPanel {
 
     private String postgres_password = "postgres";
 
-    JButton RegisterButton = new JButton();
     public LoginWindow(){
-/*
-        loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loginFrame.setPreferredSize(new Dimension(400, 250));
-        loginFrame.setLayout(new FlowLayout(FlowLayout.CENTER));
-        loginFrame.add(loginPanel);
-*/
+
         this.setPreferredSize(new Dimension(500,500));
         this.setLayout(new BorderLayout());
 
@@ -79,9 +73,6 @@ public class LoginWindow extends JPanel {
 
         loginPanel.add(buttonMain);
 
-
-
-
         buttonMain.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -114,12 +105,12 @@ public class LoginWindow extends JPanel {
     }
 
     public void launchNavigator() {
-        //loginFrame.dispose();
+
         Navigator nav = new Navigator();
 
     }
 
-    public boolean isUsernameAndPasswordCorrect(String user, char[] password) {
+    public static boolean isUsernameAndPasswordCorrect(String user, char[] password) {
 
         try {
             Connection connection = DriverManager.getConnection(url, postgres_username, postgres_password);
@@ -135,6 +126,10 @@ public class LoginWindow extends JPanel {
                 }
                 char[] correctPassword = resultPassword.toCharArray();
                 boolean isCorrectP = Arrays.equals(password, correctPassword);
+
+                resultSet.close();
+                statement.close();
+                connection.close();
 
                 if (isCorrectP) {
                     return true;

@@ -3,8 +3,7 @@ package com.codebind;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.Arrays;
 
 
@@ -12,11 +11,8 @@ public class App {
 
     public App() {
 
-
-
-
-
     }
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Pages");
@@ -28,6 +24,16 @@ public class App {
         tab.addTab("Login",null,  login, null);
         tab.addTab("Register",null,  register, null);
         frame.add(tab);
+
+        WindowListener listener = new WindowAdapter() {
+            public void WindowOpened(WindowEvent evt) {
+                Frame newFrame = (Frame) evt.getSource();
+                if ("Navigator".equals(frame.getTitle())) {
+                    frame.dispose();
+                };
+            }
+        };
+
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
