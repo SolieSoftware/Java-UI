@@ -12,8 +12,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Arrays;
 
-public class LoginWindow {
-    private JFrame loginFrame = new JFrame("Login");
+public class LoginWindow extends JPanel {
+   // private JFrame loginFrame = new JFrame("Login");
     private JPanel loginPanel = new JPanel();
     private JLabel userLabel = new JLabel("Username");
     private JTextField UsernameField = new JTextField();
@@ -31,44 +31,55 @@ public class LoginWindow {
     private String postgres_password = "postgres";
 
     JButton RegisterButton = new JButton();
-    LoginWindow() {
-
+    public LoginWindow(){
+/*
         loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginFrame.setPreferredSize(new Dimension(400, 250));
-        loginFrame.setLocation(600, 300);
+        loginFrame.setLayout(new FlowLayout(FlowLayout.CENTER));
         loginFrame.add(loginPanel);
-        loginFrame.pack();
+*/
+        this.setPreferredSize(new Dimension(500,500));
+        this.setLayout(new BorderLayout());
 
-
-
-
-        loginPanel.setLayout(null);
+        loginPanel.setLayout(new BoxLayout(loginPanel, BoxLayout.Y_AXIS));
+        loginPanel.setPreferredSize(new Dimension(450,450));
         loginPanel.setBackground(new Color(200,200,200));
 
 
-        userLabel.setBounds(150, 20, 100, 20);
+        Dimension fieldSize = new Dimension(150,30);
+
+        loginPanel.add(Box.createRigidArea(new Dimension(450,50)));
+        userLabel.setPreferredSize(fieldSize);
+        userLabel.setMaximumSize(fieldSize);
         userLabel.setForeground(new Color(0, 0, 0));
-
-
-        UsernameField.setBounds(150, 40, 100, 20);
-
-
-        passwordLabel.setBounds(150, 70, 100, 20);
-        passwordLabel.setForeground(new Color(0, 0, 0));
-
-
-        passwordField.setBounds(150, 90, 100, 20);
-
         loginPanel.add(userLabel);
+
+        loginPanel.add(Box.createRigidArea(new Dimension(450,20)));
+
+        UsernameField.setPreferredSize(fieldSize);
+        UsernameField.setMaximumSize(fieldSize);
         loginPanel.add(UsernameField);
+
+        loginPanel.add(Box.createRigidArea(new Dimension(450,20)));
+
+        passwordLabel.setPreferredSize(fieldSize);
+        passwordLabel.setMaximumSize(fieldSize);
+        passwordLabel.setForeground(new Color(0, 0, 0));
         loginPanel.add(passwordLabel);
+
+        loginPanel.add(Box.createRigidArea(new Dimension(450,20)));
+
+        passwordField.setPreferredSize(fieldSize);
+        passwordField.setMaximumSize(fieldSize);
         loginPanel.add(passwordField);
 
+        loginPanel.add(Box.createRigidArea(new Dimension(450,50)));
 
-
-        buttonMain.setBounds(150, 140, 100, 30);
+        buttonMain.setPreferredSize(new Dimension(200, 50));
 
         loginPanel.add(buttonMain);
+
+
 
 
         buttonMain.addActionListener(new ActionListener() {
@@ -83,7 +94,7 @@ public class LoginWindow {
                             "Incorrect Login",
                             JOptionPane.YES_NO_OPTION);
                     if (ans==1) {
-                        loginFrame.dispose();
+                        //loginFrame.dispose();
                     } else {
                         UsernameField.setText("");
                         passwordField.setText("");
@@ -91,18 +102,24 @@ public class LoginWindow {
                 }
 
             }
+
         });
 
-        loginFrame.setVisible(true);
+        this.add(loginPanel, BorderLayout.CENTER);
+        this.setVisible(true);
+
+       // loginFrame.pack();
+        //loginFrame.setVisible(true);
+
     }
 
     public void launchNavigator() {
-        loginFrame.dispose();
+        //loginFrame.dispose();
         Navigator nav = new Navigator();
 
     }
 
-    private boolean isUsernameAndPasswordCorrect(String user, char[] password) {
+    public boolean isUsernameAndPasswordCorrect(String user, char[] password) {
 
         try {
             Connection connection = DriverManager.getConnection(url, postgres_username, postgres_password);
