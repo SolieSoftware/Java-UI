@@ -110,7 +110,7 @@ public class LoginWindow extends JPanel {
 
     }
 
-    public static boolean isUsernameAndPasswordCorrect(String user, char[] password) {
+    public boolean isUsernameAndPasswordCorrect(String user, char[] password) {
 
         try {
             Connection connection = DriverManager.getConnection(url, postgres_username, postgres_password);

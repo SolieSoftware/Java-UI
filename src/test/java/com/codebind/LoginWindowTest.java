@@ -11,6 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoginWindowTest {
 
+    LoginWindow lw = new LoginWindow();
+
     @Test
     void launchNavigator() {
         WindowListener listener = new WindowAdapter() {
@@ -29,13 +31,13 @@ class LoginWindowTest {
         String incorrectUser = "Adam";
         char[] incorrectPassword = {'F', 'o', 'u', 'n', 'd'};
 
-        assertEquals(LoginWindow.isUsernameAndPasswordCorrect(correctUser, correctPassword), true);
+        assertEquals(lw.isUsernameAndPasswordCorrect(correctUser, correctPassword), true);
 
-        assertEquals(LoginWindow.isUsernameAndPasswordCorrect(incorrectUser, incorrectPassword), false);
+        assertEquals(lw.isUsernameAndPasswordCorrect(incorrectUser, incorrectPassword), false);
 
-        assertEquals(LoginWindow.isUsernameAndPasswordCorrect(incorrectUser, correctPassword), false);
+        assertEquals(lw.isUsernameAndPasswordCorrect(incorrectUser, correctPassword), false);
 
-        assertEquals(LoginWindow.isUsernameAndPasswordCorrect(correctUser, incorrectPassword), false);
+        assertEquals(lw.isUsernameAndPasswordCorrect(correctUser, incorrectPassword), false);
 
 
     }

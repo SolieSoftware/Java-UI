@@ -14,9 +14,9 @@ public class RegisterForm extends JPanel {
 
     public static JTextField username = new JTextField();
 
-    public JPasswordField password = new JPasswordField();
+    public static JPasswordField password = new JPasswordField();
 
-    public JTextField email = new JTextField();
+    public static JTextField email = new JTextField();
 
     JButton registerButton = new JButton("Submit");
 
@@ -26,13 +26,6 @@ public class RegisterForm extends JPanel {
 
 
     RegisterForm() {
-        /*
-        RegisterForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        RegisterForm.setPreferredSize(new Dimension(400,350));
-        RegisterForm.setLayout(null);
-
-         */
-
         this.setPreferredSize(new Dimension(500,500));
 
         form.setPreferredSize(new Dimension(500,500));
@@ -83,7 +76,7 @@ public class RegisterForm extends JPanel {
 
 
                 if (checkUsernameExists(user) == false) {
-                    JOptionPane.showMessageDialog(null, "This username already exists please pick another one");
+                    JOptionPane.showMessageDialog(null, "This username already exists please pick another one. ");
                     username.setText("");
                     password.setText("");
                     email.setText("");
@@ -97,11 +90,6 @@ public class RegisterForm extends JPanel {
                 email.setText("");
 
                 JOptionPane.showMessageDialog(null, "Welcome to the Club!! Please login on the login page. ");
-
-                return;
-
-
-
             }
         });
 
@@ -112,8 +100,7 @@ public class RegisterForm extends JPanel {
 
     }
 
-    public boolean checkEmptyFields() {
-        String temp;
+    public static boolean checkEmptyFields() {
         if (!username.getText().isEmpty() && !password.getText().isEmpty() && !email.getText().isEmpty()) {
             return true;
         } else {
@@ -123,7 +110,6 @@ public class RegisterForm extends JPanel {
     }
 
     public boolean checkUsernameExists(String user) {
-        boolean check = true;
         try {
             Connection connection = DriverManager.getConnection(url, user_post, password_post);
             Statement statement = connection.createStatement();
@@ -156,13 +142,10 @@ public class RegisterForm extends JPanel {
             Statement statement = connection.createStatement();
             String query = "INSERt INTO login_details (username, password, email) VALUES (\'" +
                     user + "\', \'" + pass + "\', \'" + email +"\');";
-            int countUpdate = statement.executeUpdate(query);
-
-            System.out.println(countUpdate + " record has been added to the database. ");
+            statement.executeUpdate(query);
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return;
     }
 }
