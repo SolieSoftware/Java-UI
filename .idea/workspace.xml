@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Started adding unit tests for different classes.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/TicTacToeButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codebind/LoginWindowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codebind/LoginWindowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codebind/RegisterFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codebind/RegisterFormTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696192264292</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added Tic Tac Toe game and more tests to RegisterForm unit tests">
+      <created>1696537121589</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696537121589</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,7 +247,8 @@
     <MESSAGE value="Adding register form page. Connected login to databse, need register page to writie to login details. Need to start writing suites of unit tests for each page." />
     <MESSAGE value="Added a Jtabbed pane to initial page, am in the process of making write to database processes for register page. So new users can write and store login details." />
     <MESSAGE value="Started adding unit tests for different classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started adding unit tests for different classes." />
+    <MESSAGE value="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
