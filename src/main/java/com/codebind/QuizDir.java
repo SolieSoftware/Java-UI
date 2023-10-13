@@ -10,26 +10,14 @@ import static java.awt.font.TextAttribute.FONT;
 import static java.awt.font.TextAttribute.WEIGHT_BOLD;
 
 public class QuizDir{
-
     JFrame quizFrame = new JFrame("Quiz Directory");
-
     JPanel infoPanel = new JPanel();
-
     JLabel info = new JLabel("Below are the different quiz Topics!");
-
     JPanel capitalPanel = new JPanel();
-
     JButton[] capitalButtons;
-
     JPanel moviePanel = new JPanel();
 
     JButton movieButton = new JButton("Movie Quiz!!!");
-
-
-
-
-
-
 
     QuizDir() {
         try {

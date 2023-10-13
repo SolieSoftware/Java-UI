@@ -33,6 +33,8 @@ public class LoginWindow extends JPanel {
     JPanel[] gridPanels = new JPanel[5];
     JPanel[] blankPanels = new JPanel[4];
 
+    JPanel[] southPanels = new JPanel[2];
+
     Font f1 = new Font("Arial", Font.BOLD, 20);
 
     public LoginWindow(){
@@ -46,20 +48,20 @@ public class LoginWindow extends JPanel {
         this.setPreferredSize(new Dimension(500,500));
         this.setLayout(new BorderLayout());
 
-        loginPanel.setLayout(new GridLayout(8,1));
-        loginPanel.setPreferredSize(new Dimension(450,450));
+        loginPanel.setLayout(new GridLayout(9,1));
         loginPanel.setBackground(new Color(200,200,200));
 
         JPanel container = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
         container.add(loginPanel);
         this.add(container, BorderLayout.CENTER);
 
-
         Dimension fieldSize = new Dimension(150,30);
-        GridBagConstraints constraints = new GridBagConstraints();
 
         for (int i=0; i<4; i++) {
             blankPanels[i] = new JPanel();
+            if (i<2) {
+                southPanels[i] = new JPanel();
+            }
         }
 
         loginPanel.add(blankPanels[0]);
@@ -67,7 +69,10 @@ public class LoginWindow extends JPanel {
         userLabel.setForeground(new Color(0, 0, 0));
         userLabel.setFont(f1);
         gridPanels[0] = new JPanel();
-        gridPanels[0].add(userLabel);
+        gridPanels[0].setLayout(new BorderLayout());
+        southPanels[0].setLayout(new FlowLayout(FlowLayout.CENTER));
+        southPanels[0].add(userLabel);
+        gridPanels[0].add(southPanels[0], BorderLayout.SOUTH);
         loginPanel.add(gridPanels[0]);
 
         UsernameField.setPreferredSize(fieldSize);
@@ -79,7 +84,10 @@ public class LoginWindow extends JPanel {
         passwordLabel.setForeground(new Color(0, 0, 0));
         passwordLabel.setFont(f1);
         gridPanels[2] = new JPanel();
-        gridPanels[2].add(passwordLabel);
+        gridPanels[2].setLayout(new BorderLayout());
+        southPanels[1].setLayout(new FlowLayout(FlowLayout.CENTER));
+        southPanels[1].add(passwordLabel);
+        gridPanels[2].add(southPanels[1], BorderLayout.SOUTH);
         loginPanel.add(gridPanels[2]);
 
         passwordField.setPreferredSize(fieldSize);
@@ -93,9 +101,9 @@ public class LoginWindow extends JPanel {
         gridPanels[4].add(buttonMain);
         loginPanel.add(gridPanels[4]);
 
-        loginPanel.add(blankPanels[1]);
-
         loginPanel.add(blankPanels[2]);
+
+        loginPanel.add(blankPanels[3]);
 
         buttonMain.addActionListener(new ActionListener() {
             @Override
@@ -104,12 +112,15 @@ public class LoginWindow extends JPanel {
                 char[] input = passwordField.getPassword();
                 if (isUsernameAndPasswordCorrect(user, input)) {
                     launchNavigator();
+                    JFrame appFrame = (JFrame) SwingUtilities.getWindowAncestor((JButton) e.getSource());
+                    appFrame.dispose();
                 } else {
                     int ans = JOptionPane.showConfirmDialog(null, "Would you like to try again?",
                             "Incorrect Login",
                             JOptionPane.YES_NO_OPTION);
                     if (ans==1) {
-                        //loginFrame.dispose();
+                        JFrame appFrame = (JFrame) SwingUtilities.getWindowAncestor((JButton) e.getSource());
+                        appFrame.dispose();
                     } else {
                         UsernameField.setText("");
                         passwordField.setText("");
@@ -126,8 +137,7 @@ public class LoginWindow extends JPanel {
 
     public void launchNavigator() {
 
-        Navigator nav = new Navigator();
-
+        new Navigator();
     }
 
     public boolean isUsernameAndPasswordCorrect(String user, char[] password) {
@@ -162,8 +172,9 @@ public class LoginWindow extends JPanel {
             } catch (Exception e) {
                 if (resultPassword == null) {
                     JOptionPane.showMessageDialog(null, "This username does not exist in the database.");
+                } else {
+                    e.printStackTrace();
                 }
-                e.printStackTrace();
             }
 
         } catch (Exception e) {

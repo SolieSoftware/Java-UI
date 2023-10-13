@@ -4,16 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Added Tic Tac Toe game and more tests to RegisterForm unit tests">
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +89,7 @@
       <recent name="com.codebind" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.NoughtsAndCrosses">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.App" />
       <module name="Java-UI" />
@@ -271,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696539773309</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format.">
+      <created>1697209898903</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697209898903</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +316,8 @@
     <MESSAGE value="Added a Jtabbed pane to initial page, am in the process of making write to database processes for register page. So new users can write and store login details." />
     <MESSAGE value="Started adding unit tests for different classes." />
     <MESSAGE value="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
+    <MESSAGE value="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

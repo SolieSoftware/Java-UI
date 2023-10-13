@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 
-import static java.awt.font.TextAttribute.FONT;
 
 public class NoughtsAndCrosses implements ActionListener {
 
@@ -130,7 +129,7 @@ public class NoughtsAndCrosses implements ActionListener {
     }
 
     public static void main(String[] args) {
-        NoughtsAndCrosses NC = new NoughtsAndCrosses();
+        new NoughtsAndCrosses();
     }
 
     @Override
@@ -148,53 +147,88 @@ public class NoughtsAndCrosses implements ActionListener {
             changeTurn();
         }
 
+        if (checkWinConditions() == false) {
+            checkForDraw();
+        }
+
+
+    }
+
+    public void checkForDraw() {
+        for (int i=0;i<9;i++) {
+            if (gridButtons[i].getText() == "") {
+                return;
+            }
+        }
+        winner.setText("Draw!");
+        winner.setVisible(true);
+        retryButton.setVisible((true));
+    }
+
+    public boolean checkWinConditions() {
         Vector<String> set = new Vector();
         set.add(gridButtons[0].getText());
         set.add(gridButtons[1].getText());
         set.add(gridButtons[2].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[3].getText());
         set.add(gridButtons[4].getText());
         set.add(gridButtons[5].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[6].getText());
         set.add(gridButtons[7].getText());
         set.add(gridButtons[8].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[0].getText());
         set.add(gridButtons[3].getText());
         set.add(gridButtons[6].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[1].getText());
         set.add(gridButtons[4].getText());
         set.add(gridButtons[7].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[2].getText());
         set.add(gridButtons[5].getText());
-        set.add(gridButtons[8].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[0].getText());
         set.add(gridButtons[4].getText());
         set.add(gridButtons[8].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
         set.add(gridButtons[2].getText());
         set.add(gridButtons[4].getText());
         set.add(gridButtons[6].getText());
-        checkWin(set);
+        if (checkWin(set)) {
+            return true;
+        }
         set.clear();
+        return false;
     }
 
-    public void checkWin(Vector<String> set) {
+    public boolean checkWin(Vector<String> set) {
         for (String s: set) {
             if (!s.equals(set.get(0)) | s == "") {
-                return;
+                return false;
             }
         }
         if (set.get(0) == "X") {
@@ -205,6 +239,7 @@ public class NoughtsAndCrosses implements ActionListener {
         winner.setVisible(true);
 
         retryButton.setVisible(true);
+        return true;
 
     }
 }
