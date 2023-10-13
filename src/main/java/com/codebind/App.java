@@ -15,6 +15,12 @@ public class App {
 
 
     public static void main(String[] args) {
+        try {
+            // Set the Nimbus look and feel
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         JFrame frame = new JFrame("Pages");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(500,500));

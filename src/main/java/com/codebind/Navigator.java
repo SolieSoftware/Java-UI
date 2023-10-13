@@ -13,16 +13,23 @@ public class Navigator {
 
     private JButton quizPageLaunchButton = new JButton("Start Quizzing...");
 
-    private JButton LaunchGames = new JButton("Start gaming...");
+    private JButton LaunchGames = new JButton("Start Gaming...");
     Navigator() {
+        try {
+            // Set the Nimbus look and feel
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         navFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         navFrame.setPreferredSize(new Dimension(600, 600));
         navFrame.setLocationRelativeTo(null);
         navFrame.setLayout(new BorderLayout());
 
-        quizPanel.setBackground(new Color(200, 50, 200));
+
+        //quizPanel.setBackground(new Color(200, 50, 200));
         quizPanel.setPreferredSize((new Dimension(150,600)));
-        quizPanel.setLayout(null);
+        quizPanel.setLayout(new BorderLayout());
 
         quizPageLaunchButton.setPreferredSize(new Dimension(150,600));
         quizPageLaunchButton.addActionListener(new ActionListener() {
@@ -43,7 +50,7 @@ public class Navigator {
         });
 
 
-        quizPanel.add(quizPageLaunchButton);
+        quizPanel.add(quizPageLaunchButton, BorderLayout.CENTER);
         gamingPanel.add(LaunchGames);
 
         navFrame.add(gamingPanel, BorderLayout.EAST);
@@ -51,6 +58,12 @@ public class Navigator {
 
         navFrame.pack();
         navFrame.setVisible(true);
+    }
+
+    public static void main(String args[]) {
+
+        new Navigator();
+
     }
 
 }

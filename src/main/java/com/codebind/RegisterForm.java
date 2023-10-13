@@ -26,6 +26,12 @@ public class RegisterForm extends JPanel {
 
 
     RegisterForm() {
+        try {
+            // Set the Nimbus look and feel
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         this.setPreferredSize(new Dimension(500,500));
 
         form.setPreferredSize(new Dimension(500,500));

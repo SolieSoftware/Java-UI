@@ -30,48 +30,72 @@ public class LoginWindow extends JPanel {
 
     private String postgres_password = "postgres";
 
+    JPanel[] gridPanels = new JPanel[5];
+    JPanel[] blankPanels = new JPanel[4];
+
+    Font f1 = new Font("Arial", Font.BOLD, 20);
+
     public LoginWindow(){
+        try {
+            // Set the Nimbus look and feel
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         this.setPreferredSize(new Dimension(500,500));
         this.setLayout(new BorderLayout());
 
-        loginPanel.setLayout(new BoxLayout(loginPanel, BoxLayout.Y_AXIS));
+        loginPanel.setLayout(new GridLayout(8,1));
         loginPanel.setPreferredSize(new Dimension(450,450));
         loginPanel.setBackground(new Color(200,200,200));
 
+        JPanel container = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
+        container.add(loginPanel);
+        this.add(container, BorderLayout.CENTER);
+
 
         Dimension fieldSize = new Dimension(150,30);
+        GridBagConstraints constraints = new GridBagConstraints();
 
-        loginPanel.add(Box.createRigidArea(new Dimension(450,50)));
-        userLabel.setPreferredSize(fieldSize);
-        userLabel.setMaximumSize(fieldSize);
+        for (int i=0; i<4; i++) {
+            blankPanels[i] = new JPanel();
+        }
+
+        loginPanel.add(blankPanels[0]);
+
         userLabel.setForeground(new Color(0, 0, 0));
-        loginPanel.add(userLabel);
-
-        loginPanel.add(Box.createRigidArea(new Dimension(450,20)));
+        userLabel.setFont(f1);
+        gridPanels[0] = new JPanel();
+        gridPanels[0].add(userLabel);
+        loginPanel.add(gridPanels[0]);
 
         UsernameField.setPreferredSize(fieldSize);
-        UsernameField.setMaximumSize(fieldSize);
-        loginPanel.add(UsernameField);
+        gridPanels[1] = new JPanel();
+        gridPanels[1].add(UsernameField);
+        loginPanel.add(gridPanels[1]);
 
-        loginPanel.add(Box.createRigidArea(new Dimension(450,20)));
 
-        passwordLabel.setPreferredSize(fieldSize);
-        passwordLabel.setMaximumSize(fieldSize);
         passwordLabel.setForeground(new Color(0, 0, 0));
-        loginPanel.add(passwordLabel);
-
-        loginPanel.add(Box.createRigidArea(new Dimension(450,20)));
+        passwordLabel.setFont(f1);
+        gridPanels[2] = new JPanel();
+        gridPanels[2].add(passwordLabel);
+        loginPanel.add(gridPanels[2]);
 
         passwordField.setPreferredSize(fieldSize);
-        passwordField.setMaximumSize(fieldSize);
-        loginPanel.add(passwordField);
+        gridPanels[3] = new JPanel();
+        gridPanels[3].add(passwordField);
+        loginPanel.add(gridPanels[3]);
 
-        loginPanel.add(Box.createRigidArea(new Dimension(450,50)));
 
         buttonMain.setPreferredSize(new Dimension(200, 50));
+        gridPanels[4] = new JPanel();
+        gridPanels[4].add(buttonMain);
+        loginPanel.add(gridPanels[4]);
 
-        loginPanel.add(buttonMain);
+        loginPanel.add(blankPanels[1]);
+
+        loginPanel.add(blankPanels[2]);
 
         buttonMain.addActionListener(new ActionListener() {
             @Override
@@ -96,11 +120,7 @@ public class LoginWindow extends JPanel {
 
         });
 
-        this.add(loginPanel, BorderLayout.CENTER);
         this.setVisible(true);
-
-       // loginFrame.pack();
-        //loginFrame.setVisible(true);
 
     }
 

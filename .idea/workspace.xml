@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Added Tic Tac Toe game and more tests to RegisterForm unit tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +91,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Gaming Directory" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.GamingDirectory" />
+      <module name="Java-UI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Navigator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.Navigator" />
+      <module name="Java-UI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoughtsAndCrosses" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.NoughtsAndCrosses" />
+      <module name="Java-UI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuizDir" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.QuizDir" />
       <module name="Java-UI" />
@@ -108,6 +139,9 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.CapitalQuizOne" />
       <item itemvalue="Application.QuizDir" />
+      <item itemvalue="Application.NoughtsAndCrosses" />
+      <item itemvalue="Application.Navigator" />
+      <item itemvalue="Application.Gaming Directory" />
       <item itemvalue="JUnit.AppTest.main" />
     </list>
     <recent_temporary>
@@ -223,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696537121589</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added Tic Tac Toe game and more tests to RegisterForm unit tests">
+      <created>1696539753211</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696539753211</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added Tic Tac Toe game and more tests to RegisterForm unit tests">
+      <created>1696539773309</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696539773309</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -32,6 +32,12 @@ public class QuizDir{
 
 
     QuizDir() {
+        try {
+            // Set the Nimbus look and feel
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         quizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         quizFrame.setSize(600, 600);
         quizFrame.setLocationRelativeTo(null);

@@ -22,6 +22,11 @@
             <scope>test</scope>
 
         </dependency>
+        <dependency>
+            <groupId>com.seaglasslookandfeel</groupId>
+            <artifactId>seaglasslookandfeel</artifactId>
+            <version>0.2.1</version>
+        </dependency>
 
     </dependencies>
 
