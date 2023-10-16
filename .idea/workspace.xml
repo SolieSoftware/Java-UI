@@ -5,28 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AfricanCapitalsQuiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AmericanCapitalsQuiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AsianCapitalsQuiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AustralianCapitalsQuiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/WorldCapitalsQuiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/CapitalQuizOne.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/EuropeanCapitalsQuiz.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/CapitalQuizOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/EuropeanCapitalsQuiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/RegisterForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/App$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/LoginWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/CapitalQuizOne$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/CapitalQuizOne.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/RegisterForm.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,7 @@
       <recent name="com.codebind" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NoughtsAndCrosses">
+  <component name="RunManager" selected="Application.QuizDir">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.App" />
       <module name="Java-UI" />
@@ -97,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CapitalQuizOne" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.codebind." />
+    <configuration name="EuropeanCapitalsQuiz" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.EuropeanCapitalsQuiz" />
       <module name="Java-UI" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,7 +145,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.CapitalQuizOne" />
+      <item itemvalue="Application.EuropeanCapitalsQuiz" />
       <item itemvalue="Application.QuizDir" />
       <item itemvalue="Application.NoughtsAndCrosses" />
       <item itemvalue="Application.Navigator" />

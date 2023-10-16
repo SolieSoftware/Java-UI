@@ -4,69 +4,50 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
 
 
-public class CapitalQuizOne {
+public class EuropeanCapitalsQuiz {
     JFrame euroQuizFrame = new JFrame("Europe Capitals Quiz");
 
     JPanel euroPanelMain = new JPanel();
 
-    JPanel[] euroPanels = new JPanel[10];
-
+    JPanel[] euroPanels = new JPanel[11];
     JPanel[] answerPanel = new JPanel[10];
+
     JLabel[] questions = new JLabel[10];
     JRadioButton[][] answerOptions = new JRadioButton[10][4];
 
-    String[] QuestionList = {"Capital of Germany?",
-            "Capital of Poland?",
-            "Capital of Bulgaria?",
-            "Capital of Sweden?",
-            "Capital of Norway?",
-            "Capital of Greece?",
-            "Capital of Austria?",
-            "Capital of Ireland?",
-            "Capital of Portugal?",
-            "Capital of Spain?"
-    };
-
-    String[] correctAnswers = {
-            "Berlin",
-            "Warsaw",
-            "Sofia",
-            "Stockholm",
-            "Oslo",
-            "Athens",
-            "Vienna",
-            "Dublin",
-            "Lisbon",
-            "Madrid"
-    };
-
-    ButtonGroup[] answerGroups;
-    ArrayList<String> capitalList = getCapitals();
-
+    String[] correctAnswers = new String[10];
+    ButtonGroup[] answerGroups = new ButtonGroup[10];
     JButton submitButton = new JButton("Submit Answers");
+    JButton retryButton = new JButton("Reset");
+
+    JButton backButton = new JButton("Exit");
+
+    ArrayList<String> countryList = new ArrayList<>();
+    ArrayList<String> capitalList = new ArrayList<>();
 
     int totalCorrect;
 
+    private String url = "jdbc:postgresql://localhost:5432/Capitals";
+    private String username = "postgres";
+    private String password = "postgres";
 
-    CapitalQuizOne() {
+    Font f1 = new Font("SansSerif", Font.BOLD, 20);
+    EuropeanCapitalsQuiz() {
         euroQuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         euroQuizFrame.setPreferredSize(new Dimension(800, 800));
         euroQuizFrame.setLocation(600, 200);
-
         euroPanelMain.setLayout(new GridLayout(10, 1, 10, 10));
+        getQuestions();
 
-        capitalList.remove(0);
-
-        Font f1 = new Font("SansSerif", Font.BOLD, 20);
-        answerGroups = new ButtonGroup[10];
 
         for (int i = 0; i < 10; i++) {
             euroPanels[i] = new JPanel();
@@ -74,7 +55,7 @@ public class CapitalQuizOne {
             euroPanels[i].setBackground(new Color(255, 255, 255));
             euroPanels[i].setBorder(BorderFactory.createLineBorder(Color.black));
 
-            questions[i] = new JLabel(QuestionList[i]);
+
             questions[i].setFont(f1);
 
             answerOptions[i] = new JRadioButton[4];
@@ -85,7 +66,6 @@ public class CapitalQuizOne {
                 if (j == posCorrect) {
                     answerOptions[i][j] = new JRadioButton(correctAnswers[i]);
                 } else {
-
                     answerOptions[i][j] = new JRadioButton(getWrongAnswer(correctAnswers[i]));
                 }
                 answerGroups[i].add(answerOptions[i][j]);
@@ -101,8 +81,9 @@ public class CapitalQuizOne {
 
             euroPanelMain.add(euroPanels[i]);
         }
-        submitButton.setSize(250, 140);
+
         submitButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 totalCorrect = 0;
                 String[] answers = new String[10];
@@ -125,42 +106,80 @@ public class CapitalQuizOne {
             }
         });
 
-        euroPanelMain.add(submitButton);
+        retryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                euroQuizFrame.dispose();
+                new EuropeanCapitalsQuiz();
+            }
+        });
+
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                euroQuizFrame.dispose();
+                new QuizDir();
+            }
+        });
+
+        submitButton.setSize(250, 140);
+        retryButton.setSize(250,140);
+        backButton.setSize(250,140);
+
+        euroPanels[10] = new JPanel();
+        euroPanelMain.add(euroPanels[10]);
+
+        euroPanels[10].setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        euroPanels[10].add(submitButton);
+        euroPanels[10].add(retryButton);
+        euroPanels[10].add(backButton);
 
         euroQuizFrame.add(euroPanelMain);
-
 
         euroQuizFrame.pack();
         euroQuizFrame.setVisible(true);
     }
 
-    public ArrayList<String> getCapitals() {
-        String file = "C:\\Users\\solsh\\IdeaProjects\\Java-UI\\src\\com\\codebind\\europe-capital-cities.csv";
-        ArrayList<String> capitals = new ArrayList<>();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                // Split the line into fields using a comma as the delimiter
-                String[] fields = line.split(",");
-                // Process the fields as needed
-                int count = 0;
-                for (String field : fields) {
-                    count += 1;
-                    if (count == 2) {
-                        capitals.add(field);
-                    }
-                }// Move to the next line
+    public void getQuestions() {
+        try {
+            Connection connection = DriverManager.getConnection(url, username, password);
+            Statement statement = connection.createStatement();
+            String sqlQuery = "Select * FROM world_capitals WHERE continent = 'Europe'";
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            String country;
+            String capital;
+            while (resultSet.next()) {
+                country = resultSet.getString("country");
+                capital = resultSet.getString("capital");
+                countryList.add(country);
+                capitalList.add(capital);
             }
-        } catch (IOException e) {
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+
+        } catch(Exception e) {
             e.printStackTrace();
         }
-        return capitals;
+
+        Random rand = new Random();
+        int num;
+        for (int i=0;i<10;i++) {
+            num = rand.nextInt(countryList.size());
+            questions[i] = new JLabel();
+
+            questions[i].setText("Capital of " + countryList.get(num) + "?");
+            correctAnswers[i] = capitalList.get(num);
+            countryList.remove(num);
+            capitalList.remove(num);
+        }
     }
 
     public String getWrongAnswer(String correctAnswer) {
         Random rand = new Random();
-        int capitalNum = 0;
+        int capitalNum;
         String wrongCapital = correctAnswer;
         while (wrongCapital.equals(correctAnswer)) {
             capitalNum = rand.nextInt(capitalList.size());
@@ -168,6 +187,9 @@ public class CapitalQuizOne {
         }
         return wrongCapital;
 
+    }
+    public static void main(String args[]) {
+        new EuropeanCapitalsQuiz();
     }
 }
 

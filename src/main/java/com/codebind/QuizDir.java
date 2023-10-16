@@ -5,19 +5,18 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static java.awt.Font.DIALOG;
-import static java.awt.font.TextAttribute.FONT;
-import static java.awt.font.TextAttribute.WEIGHT_BOLD;
-
 public class QuizDir{
     JFrame quizFrame = new JFrame("Quiz Directory");
     JPanel infoPanel = new JPanel();
+    JPanel infoSubPanel = new JPanel();
     JLabel info = new JLabel("Below are the different quiz Topics!");
+    JButton exitButton = new JButton();
     JPanel capitalPanel = new JPanel();
     JButton[] capitalButtons;
     JPanel moviePanel = new JPanel();
 
     JButton movieButton = new JButton("Movie Quiz!!!");
+    Font f1 = new Font(Font.SERIF, Font.BOLD, 35);
 
     QuizDir() {
         try {
@@ -28,20 +27,35 @@ public class QuizDir{
         }
         quizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         quizFrame.setSize(600, 600);
-        quizFrame.setLocationRelativeTo(null);
-        quizFrame.setLayout(null);
 
         infoPanel.setSize(600, 100);
-        infoPanel.setAlignmentY(Component.TOP_ALIGNMENT);
-        infoPanel.setLayout(new FlowLayout());
-        quizFrame.add(infoPanel);
+        infoPanel.setLayout(new GridLayout(2,1));
 
-        Font f1 = new Font(Font.SERIF, Font.BOLD, 20);
+        exitButton.setSize(250,60);
+        exitButton.setForeground(new Color(80,80,80));
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                new Navigator();
+            }
+        });
 
         info.setForeground(new Color(0,0,0));
         info.setFont(f1);
-        info.setVerticalAlignment(SwingConstants.CENTER);
+
+        infoSubPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        infoSubPanel.add(exitButton);
         infoPanel.add(info);
+        infoPanel.add(infoSubPanel);
+
+
+        quizFrame.add(infoPanel);
+
+
+
+
 
         capitalPanel.setBounds(0, 100, 600, 100);
         capitalPanel.setBackground(new Color(255,255,255));
@@ -60,10 +74,51 @@ public class QuizDir{
             @Override
             public void actionPerformed(ActionEvent e) {
                 quizFrame.dispose();
-                CapitalQuizOne capitalQuizOne = new CapitalQuizOne();
+                EuropeanCapitalsQuiz europeanCapitalsQuiz = new EuropeanCapitalsQuiz();
 
             }
         });
+
+        capitalButtons[1].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                new AsianCapitalsQuiz();
+            }
+        });
+
+        capitalButtons[2].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                new AfricanCapitalsQuiz();
+            }
+        });
+
+        capitalButtons[3].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                new AmericanCapitalsQuiz();
+            }
+        });
+
+        capitalButtons[4].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                new AustralianCapitalsQuiz();
+            }
+        });
+
+        capitalButtons[5].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                quizFrame.dispose();
+                new WorldCapitalsQuiz();
+            }
+        });
+
 
 
 
@@ -78,7 +133,7 @@ public class QuizDir{
             @Override
             public void actionPerformed(ActionEvent e) {
                 quizFrame.dispose();
-                MovieQuiz movieQuiz = new MovieQuiz();
+                new MovieQuiz();
             }
 
         });
@@ -91,7 +146,7 @@ public class QuizDir{
 
 
     public static void main (String[] args) {
-        QuizDir quizDirectory = new QuizDir();
+        new QuizDir();
 
     }
 
