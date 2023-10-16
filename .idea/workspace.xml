@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AfricanCapitalsQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AmericanCapitalsQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AsianCapitalsQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/AustralianCapitalsQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/WorldCapitalsQuiz.java" afterDir="false" />
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="All capital quizzes now fully implemented. Ability to navigate from panel to panel also added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/CapitalQuizOne.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/EuropeanCapitalsQuiz.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/CapitalQuizOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/EuropeanCapitalsQuiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/CapitalQuizOne$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/CapitalQuizOne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697209898903</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="All capital quizzes now fully implemented. Ability to navigate from panel to panel also added.">
+      <created>1697465482123</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697465482123</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,7 +303,8 @@
     <MESSAGE value="Started adding unit tests for different classes." />
     <MESSAGE value="Added Tic Tac Toe game and more tests to RegisterForm unit tests" />
     <MESSAGE value="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format." />
+    <MESSAGE value="All capital quizzes now fully implemented. Ability to navigate from panel to panel also added." />
+    <option name="LAST_COMMIT_MESSAGE" value="All capital quizzes now fully implemented. Ability to navigate from panel to panel also added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
