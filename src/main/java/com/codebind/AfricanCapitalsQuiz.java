@@ -11,8 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class AfricanCapitalsQuiz {
-    JFrame QuizFrame = new JFrame("African Capitals Quiz");
+public class AfricanCapitalsQuiz extends CentreScreen{
 
     JPanel panelMain = new JPanel();
 
@@ -39,9 +38,7 @@ public class AfricanCapitalsQuiz {
 
     Font f1 = new Font("SansSerif", Font.BOLD, 20);
     AfricanCapitalsQuiz() {
-        QuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        QuizFrame.setPreferredSize(new Dimension(800, 800));
-        QuizFrame.setLocation(600, 200);
+        this.setPreferredSize(new Dimension(800, 800));
         panelMain.setLayout(new GridLayout(10, 1, 10, 10));
         getQuestions();
 
@@ -106,7 +103,7 @@ public class AfricanCapitalsQuiz {
         retryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                QuizFrame.dispose();
+                dispose();
                 new AfricanCapitalsQuiz();
             }
         });
@@ -114,7 +111,7 @@ public class AfricanCapitalsQuiz {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                QuizFrame.dispose();
+                dispose();
                 new QuizDir();
             }
         });
@@ -133,11 +130,11 @@ public class AfricanCapitalsQuiz {
         panels[10].add(backButton);
 
 
-        QuizFrame.add(panelMain);
+        this.add(panelMain);
 
 
-        QuizFrame.pack();
-        QuizFrame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
     }
 
     public void getQuestions() {

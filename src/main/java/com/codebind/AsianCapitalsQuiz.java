@@ -11,9 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class AsianCapitalsQuiz {
-
-    JFrame QuizFrame = new JFrame("Asian Capitals Quiz");
+public class AsianCapitalsQuiz extends CentreScreen{
 
     JPanel panelMain = new JPanel();
 
@@ -40,10 +38,12 @@ public class AsianCapitalsQuiz {
 
     Font f1 = new Font("SansSerif", Font.BOLD, 20);
     AsianCapitalsQuiz() {
-        QuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        QuizFrame.setPreferredSize(new Dimension(800, 800));
-        QuizFrame.setLocation(600, 200);
+        this.setPreferredSize(new Dimension(800, 800));
+        this.setTitle("Asian Capitals Quiz");
         panelMain.setLayout(new GridLayout(10, 1, 10, 10));
+        setUpFrame();
+
+
         getQuestions();
 
 
@@ -107,7 +107,7 @@ public class AsianCapitalsQuiz {
         retryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                QuizFrame.dispose();
+                dispose();
                 new AsianCapitalsQuiz();
             }
         });
@@ -115,7 +115,7 @@ public class AsianCapitalsQuiz {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                QuizFrame.dispose();
+                dispose();
                 new QuizDir();
             }
         });
@@ -134,11 +134,11 @@ public class AsianCapitalsQuiz {
         panels[10].add(backButton);
 
 
-        QuizFrame.add(panelMain);
+        this.add(panelMain);
 
 
-        QuizFrame.pack();
-        QuizFrame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
     }
 
     public void getQuestions() {

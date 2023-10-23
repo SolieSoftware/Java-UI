@@ -13,8 +13,7 @@ import java.util.Random;
 
 
 
-public class EuropeanCapitalsQuiz {
-    JFrame euroQuizFrame = new JFrame("Europe Capitals Quiz");
+public class EuropeanCapitalsQuiz extends CentreScreen {
 
     JPanel euroPanelMain = new JPanel();
 
@@ -42,9 +41,10 @@ public class EuropeanCapitalsQuiz {
 
     Font f1 = new Font("SansSerif", Font.BOLD, 20);
     EuropeanCapitalsQuiz() {
-        euroQuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        euroQuizFrame.setPreferredSize(new Dimension(800, 800));
-        euroQuizFrame.setLocation(600, 200);
+        this.setTitle("European Capitals Quiz");
+        this.setSize(new Dimension(800, 800));
+        setUpFrame();
+
         euroPanelMain.setLayout(new GridLayout(10, 1, 10, 10));
         getQuestions();
 
@@ -109,7 +109,7 @@ public class EuropeanCapitalsQuiz {
         retryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                euroQuizFrame.dispose();
+                dispose();
                 new EuropeanCapitalsQuiz();
             }
         });
@@ -117,7 +117,7 @@ public class EuropeanCapitalsQuiz {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                euroQuizFrame.dispose();
+                dispose();
                 new QuizDir();
             }
         });
@@ -135,10 +135,10 @@ public class EuropeanCapitalsQuiz {
         euroPanels[10].add(retryButton);
         euroPanels[10].add(backButton);
 
-        euroQuizFrame.add(euroPanelMain);
+        this.add(euroPanelMain);
 
-        euroQuizFrame.pack();
-        euroQuizFrame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
     }
 
     public void getQuestions() {

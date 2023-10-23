@@ -5,8 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class QuizDir{
-    JFrame quizFrame = new JFrame("Quiz Directory");
+public class QuizDir extends CentreScreen{
     JPanel infoPanel = new JPanel();
     JPanel infoSubPanel = new JPanel();
     JLabel info = new JLabel("Below are the different quiz Topics!");
@@ -25,8 +24,12 @@ public class QuizDir{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        quizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        quizFrame.setSize(600, 600);
+
+        this.setTitle("Quiz Directory");
+        this.setSize(600,600);
+        this.setLayout(new FlowLayout(FlowLayout.CENTER));
+        setUpFrame();
+
 
         infoPanel.setSize(600, 100);
         infoPanel.setLayout(new GridLayout(2,1));
@@ -36,7 +39,7 @@ public class QuizDir{
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new Navigator();
             }
         });
@@ -50,8 +53,7 @@ public class QuizDir{
         infoPanel.add(info);
         infoPanel.add(infoSubPanel);
 
-
-        quizFrame.add(infoPanel);
+        this.add(infoPanel);
 
 
 
@@ -60,7 +62,7 @@ public class QuizDir{
         capitalPanel.setBounds(0, 100, 600, 100);
         capitalPanel.setBackground(new Color(255,255,255));
         capitalPanel.setLayout(new FlowLayout());
-        quizFrame.add(capitalPanel);
+        this.add(capitalPanel);
 
         capitalButtons = new JButton[7];
 
@@ -73,7 +75,7 @@ public class QuizDir{
         capitalButtons[0].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 EuropeanCapitalsQuiz europeanCapitalsQuiz = new EuropeanCapitalsQuiz();
 
             }
@@ -82,7 +84,7 @@ public class QuizDir{
         capitalButtons[1].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new AsianCapitalsQuiz();
             }
         });
@@ -90,7 +92,7 @@ public class QuizDir{
         capitalButtons[2].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new AfricanCapitalsQuiz();
             }
         });
@@ -98,7 +100,7 @@ public class QuizDir{
         capitalButtons[3].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new AmericanCapitalsQuiz();
             }
         });
@@ -106,7 +108,7 @@ public class QuizDir{
         capitalButtons[4].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new AustralianCapitalsQuiz();
             }
         });
@@ -114,7 +116,7 @@ public class QuizDir{
         capitalButtons[5].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new WorldCapitalsQuiz();
             }
         });
@@ -125,21 +127,21 @@ public class QuizDir{
         moviePanel.setBounds(0, 200, 600, 100);
         moviePanel.setBackground(new Color(255,255,255));
         moviePanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        quizFrame.add(moviePanel);
+        this.add(moviePanel);
 
         movieButton.setSize(300, 130);
 
         movieButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                quizFrame.dispose();
+                dispose();
                 new MovieQuiz();
             }
 
         });
         moviePanel.add(movieButton);
 
-        quizFrame.setVisible(true);
+        this.setVisible(true);
 
 
     }

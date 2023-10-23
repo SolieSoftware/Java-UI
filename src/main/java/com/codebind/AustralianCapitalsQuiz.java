@@ -11,8 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class AustralianCapitalsQuiz {
-    JFrame QuizFrame = new JFrame("Australian Capitals Quiz");
+public class AustralianCapitalsQuiz extends CentreScreen{
 
     JPanel panelMain = new JPanel();
 
@@ -39,9 +38,9 @@ public class AustralianCapitalsQuiz {
 
     Font f1 = new Font("SansSerif", Font.BOLD, 20);
     AustralianCapitalsQuiz() {
-        QuizFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        QuizFrame.setPreferredSize(new Dimension(800, 800));
-        QuizFrame.setLocation(600, 200);
+        this.setTitle("Australian Capitals Quiz");
+        this.setPreferredSize(new Dimension(800, 800));
+        setUpFrame();
         panelMain.setLayout(new GridLayout(10, 1, 10, 10));
         getQuestions();
 
@@ -106,7 +105,7 @@ public class AustralianCapitalsQuiz {
         retryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                QuizFrame.dispose();
+                dispose();
                 new AustralianCapitalsQuiz();
             }
         });
@@ -114,7 +113,7 @@ public class AustralianCapitalsQuiz {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                QuizFrame.dispose();
+                dispose();
                 new QuizDir();
             }
         });
@@ -133,11 +132,11 @@ public class AustralianCapitalsQuiz {
         panels[10].add(backButton);
 
 
-        QuizFrame.add(panelMain);
+        this.add(panelMain);
 
 
-        QuizFrame.pack();
-        QuizFrame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
     }
 
     public void getQuestions() {
