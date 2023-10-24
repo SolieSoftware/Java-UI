@@ -13,8 +13,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Collections;
 
-public class MovieQuiz {
-    JFrame movieFrame = new JFrame("Movie Quiz!!");
+public class MovieQuiz extends CentreScreen{
 
     JPanel[] moviePanel = new JPanel[5];
 
@@ -48,10 +47,9 @@ public class MovieQuiz {
 
     MovieQuiz() {
 
-        movieFrame.setPreferredSize(new Dimension(1000,700));
-        movieFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        movieFrame.setLocation(500,500);
-        movieFrame.setLayout(new FlowLayout(FlowLayout.CENTER));
+        this.setSize(new Dimension(600,700));
+        this.setLayout(new FlowLayout(FlowLayout.CENTER));
+        setUpFrame();
 
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
@@ -89,11 +87,11 @@ public class MovieQuiz {
 
         for (int i = 0; i<5; i++) {
             moviePanel[i] = new JPanel();
-            moviePanel[i].setPreferredSize(new Dimension(800,100));
+            moviePanel[i].setPreferredSize(new Dimension(600,100));
             moviePanel[i].setLayout(new BorderLayout());
 
             answerPanel[i] = new JPanel();
-            answerPanel[i].setPreferredSize(new Dimension(800, 50));
+            answerPanel[i].setPreferredSize(new Dimension(600, 50));
             answerPanel[i].setLayout(new FlowLayout());
 
             questionAnswer = getQuestion();
@@ -118,7 +116,7 @@ public class MovieQuiz {
             moviePanel[i].add(questions[i], BorderLayout.NORTH);
             moviePanel[i].add(answerPanel[i], BorderLayout.SOUTH);
 
-            movieFrame.add(moviePanel[i]);
+            this.add(moviePanel[i]);
 
         }
         submitButton.setPreferredSize(new Dimension(200,50));
@@ -146,12 +144,12 @@ public class MovieQuiz {
         });
 
 
-        movieFrame.add(submitButton);
+        this.add(submitButton);
 
 
 
-        movieFrame.pack();
-        movieFrame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
 
 
 
@@ -187,6 +185,11 @@ public class MovieQuiz {
         return answers;
 
     }
+
+    public static void main(String args[]) {
+        new MovieQuiz();
+    }
+
 
 
 

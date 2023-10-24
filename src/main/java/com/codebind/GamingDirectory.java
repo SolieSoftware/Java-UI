@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GamingDirectory extends JFrame {
+public class GamingDirectory extends CentreScreen {
 
     JPanel titlePanel = new JPanel();
     JLabel title = new JLabel("Gaming Directory");
@@ -27,10 +27,11 @@ public class GamingDirectory extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        this.setPreferredSize(new Dimension(600,700));
+
+        this.setSize(new Dimension(600,700));
+        setUpFrame();
         this.setLayout(new BorderLayout());
+
 
         exitButton.setPreferredSize(new Dimension(100,50));
         exitButton.setVerticalAlignment(SwingConstants.CENTER);

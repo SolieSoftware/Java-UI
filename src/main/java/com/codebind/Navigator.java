@@ -5,8 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Navigator {
-    private JFrame navFrame = new JFrame("Navigator");
+public class Navigator extends CentreScreen{
     private JPanel quizPanel = new JPanel();
 
     private JPanel gamingPanel = new JPanel();
@@ -21,11 +20,9 @@ public class Navigator {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        navFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        navFrame.setPreferredSize(new Dimension(600, 600));
-        navFrame.setLocationRelativeTo(null);
-        navFrame.setLayout(new BorderLayout());
-
+        this.setSize(new Dimension(600, 600));
+        this.setLayout(new BorderLayout());
+        setUpFrame();
 
         //quizPanel.setBackground(new Color(200, 50, 200));
         quizPanel.setPreferredSize((new Dimension(150,600)));
@@ -35,7 +32,7 @@ public class Navigator {
         quizPageLaunchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                navFrame.dispose();
+                dispose();
                 new QuizDir();
             }
         });
@@ -44,7 +41,7 @@ public class Navigator {
         LaunchGames.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                navFrame.dispose();
+                dispose();
                 new GamingDirectory();
             }
         });
@@ -53,11 +50,11 @@ public class Navigator {
         quizPanel.add(quizPageLaunchButton, BorderLayout.CENTER);
         gamingPanel.add(LaunchGames);
 
-        navFrame.add(gamingPanel, BorderLayout.EAST);
-        navFrame.add(quizPanel, BorderLayout.WEST);
+        this.add(gamingPanel, BorderLayout.EAST);
+        this.add(quizPanel, BorderLayout.WEST);
 
-        navFrame.pack();
-        navFrame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
     }
 
     public static void main(String args[]) {

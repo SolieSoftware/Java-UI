@@ -172,8 +172,6 @@ public class EuropeanCapitalsQuiz extends CentreScreen {
 
             questions[i].setText("Capital of " + countryList.get(num) + "?");
             correctAnswers[i] = capitalList.get(num);
-            countryList.remove(num);
-            capitalList.remove(num);
         }
     }
 

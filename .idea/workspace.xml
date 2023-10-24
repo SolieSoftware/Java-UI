@@ -4,12 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="All files committed now">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codebind/CentreScreen.java" afterDir="false" />
+    <list default="true" id="e1f4ba9f-1f56-411f-b453-9edeb89589e7" name="Changes" comment="introduced centre screening of frames for all classes">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/codebind/EuropeanCapitalsQuizTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/EuropeanCapitalsQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/EuropeanCapitalsQuiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/QuizDir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/europe-capital-cities.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/GamingDirectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/MovieQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/MovieQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codebind/NoughtsAndCrosses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AfricanCapitalsQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AmericanCapitalsQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AsianCapitalsQuiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AsianCapitalsQuiz$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AsianCapitalsQuiz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AsianCapitalsQuiz$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AsianCapitalsQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AsianCapitalsQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/AustralianCapitalsQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/EuropeanCapitalsQuiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/EuropeanCapitalsQuiz$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/EuropeanCapitalsQuiz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/EuropeanCapitalsQuiz$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/EuropeanCapitalsQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/EuropeanCapitalsQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/GamingDirectory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/MovieQuiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/MovieQuiz$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/MovieQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/MovieQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/Navigator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/Navigator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/NoughtsAndCrosses.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$3.class" afterDir="false" />
@@ -19,6 +51,10 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/QuizDir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codebind/WorldCapitalsQuiz.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +67,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -81,7 +117,7 @@
       <recent name="com.codebind" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QuizDir">
+  <component name="RunManager" selected="Application.Navigator">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.App" />
       <module name="Java-UI" />
@@ -98,6 +134,13 @@
     </configuration>
     <configuration name="Gaming Directory" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.codebind.GamingDirectory" />
+      <module name="Java-UI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieQuiz" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codebind.MovieQuiz" />
       <module name="Java-UI" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,6 +188,7 @@
       <item itemvalue="Application.EuropeanCapitalsQuiz" />
       <item itemvalue="Application.QuizDir" />
       <item itemvalue="Application.NoughtsAndCrosses" />
+      <item itemvalue="Application.MovieQuiz" />
       <item itemvalue="Application.Navigator" />
       <item itemvalue="Application.Gaming Directory" />
       <item itemvalue="JUnit.AppTest.main" />
@@ -297,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697465988857</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="introduced centre screening of frames for all classes">
+      <created>1698077594559</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698077594559</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +376,8 @@
     <MESSAGE value="Implemented functional Noughts and crosses and started adding look and feel features, Tidy up on format." />
     <MESSAGE value="All capital quizzes now fully implemented. Ability to navigate from panel to panel also added." />
     <MESSAGE value="All files committed now" />
-    <option name="LAST_COMMIT_MESSAGE" value="All files committed now" />
+    <MESSAGE value="introduced centre screening of frames for all classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="introduced centre screening of frames for all classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

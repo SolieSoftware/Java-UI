@@ -7,9 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.Vector;
 
 
-public class NoughtsAndCrosses implements ActionListener {
-
-    JFrame frame = new JFrame();
+public class NoughtsAndCrosses extends CentreScreen implements ActionListener {
     JPanel titlePanel = new JPanel();
     JLabel title = new JLabel("Tic Tac Toe");
 
@@ -37,10 +35,10 @@ public class NoughtsAndCrosses implements ActionListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setPreferredSize(new Dimension(600,700));
-        frame.setLayout(new BorderLayout());
-        frame.setBackground(Color.BLACK);
+        this.setPreferredSize(new Dimension(600,700));
+        this.setLayout(new BorderLayout());
+        this.setBackground(Color.BLACK);
+        setUpFrame();
 
         Font f1 = new Font("Arial", Font.BOLD, 60);
         title.setForeground(Color.GREEN);
@@ -80,7 +78,7 @@ public class NoughtsAndCrosses implements ActionListener {
         exitButton.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
-               frame.dispose();
+               dispose();
                GamingDirectory gd = new GamingDirectory();
            }
         });
@@ -94,12 +92,12 @@ public class NoughtsAndCrosses implements ActionListener {
         titlePanel.add(scorePanel, BorderLayout.EAST);
         titlePanel.add(backPanel, BorderLayout.WEST);
         titlePanel.add(title, BorderLayout.CENTER);
-        frame.add(titlePanel, BorderLayout.NORTH);
+        this.add(titlePanel, BorderLayout.NORTH);
 
         mainPanel.setLayout(new GridLayout(3,3,5,5));
         mainPanel.setBackground(Color.BLACK);
         mainPanel.setPreferredSize(new Dimension(600,600));
-        frame.add(mainPanel, BorderLayout.CENTER);
+        this.add(mainPanel, BorderLayout.CENTER);
 
         for (int i=0; i<9; i++) {
             gridPanels[i] = new JPanel();
@@ -115,8 +113,8 @@ public class NoughtsAndCrosses implements ActionListener {
 
 
 
-        frame.pack();
-        frame.setVisible(true);
+        this.pack();
+        this.setVisible(true);
     }
 
 
